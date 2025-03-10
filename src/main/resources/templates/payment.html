@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>수납 입력</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h2>수납 입력</h2>
+<form method="post" action="/payment/receive" th:object="${receivedRequest}">
+    <label>현장 코드:</label>
+    <input type="text" th:field="*{id.cdSite}" required>
+    <br>
+
+    <label>동호:</label>
+    <input type="text" th:field="*{id.dongho}" required>
+    <br>
+
+    <label>구분:</label>
+    <input type="text" th:field="*{id.tyGubun}" required>
+    <br>
+
+    <label>차수:</label>
+    <input type="text" th:field="*{id.noChasu}" required>
+    <br>
+
+    <label>납부 날짜:</label>
+    <input type="date" th:field="*{dtReceived}" required>
+    <br>
+
+    <label>납부 금액:</label>
+    <input type="number" th:field="*{amReceived}" required>
+    <br>
+
+    <button type="submit">수납 완료</button>
+</form>
+</body>
+</html>

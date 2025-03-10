@@ -16,16 +16,17 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class AgreementId implements Serializable {
 
+    @Column(name = "CD_SITE")
+    private String cdSite;
+
+    @Column(name = "DONGHO")
+    private String dongho;
+
     @Column(name = "TY_GUBUN")
     private String tyGubun;
 
     @Column(name = "NO_CHASU")
     private String noChasu;
 
-    @Column(name = "CD_SITE")
-    private String cdSite;
-
-    @Column(name = "DONGHO")
-    private String dongho;
 }
 
